@@ -1,0 +1,29 @@
+{
+  "name": "jarvis-music-assistant",
+  "version": "1.0.0",
+  "description": "JARVIS - AI Music Assistant que toca música como o do Marvel",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "music",
+    "assistant",
+    "jarvis",
+    "ai",
+    "voice-recognition",
+    "clap-detection"
+  ],
+  "author": "Murillo Cunha",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
