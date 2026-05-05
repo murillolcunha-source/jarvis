@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎩 JARVIS - AI Music Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-gradient"></div>
+  
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <h1>🎩 JARVIS</h1>
+      </div>
+      <p class="subtitle">"Good morning. I am Jarvis. How may I assist you?"</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Music Player Section -->
+      <div class="music-section">
+        <div class="now-playing">
+          <div class="album-art">
+            <canvas id="audioCanvas"></canvas>
+          </div>
+          
+          <div class="music-info">
+            <h2 id="songTitle">Sweet Child o' Mine</h2>
+            <p id="artistName">Guns N' Roses</p>
+            
+            <div class="progress-bar">
+              <div class="progress" id="progressBar"></div>
+            </div>
+            
+            <div class="time-info">
+              <span id="currentTime">0:00</span> / <span id="duration">5:56</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Controls -->
+        <div class="controls">
+          <button class="control-btn" id="prevBtn" title="Anterior">⏮</button>
+          <button class="control-btn play-btn" id="playBtn" title="Play/Pause">▶</button>
+          <button class="control-btn" id="nextBtn" title="Próxima">⏭</button>
+          <button class="control-btn" id="stopBtn" title="Parar">⏹</button>
+        </div>
+
+        <!-- Volume Control -->
+        <div class="volume-control">
+          <span>🔊</span>
+          <input type="range" id="volumeSlider" class="slider" min="0" max="100" value="70">
+          <span id="volumeValue">70%</span>
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist-section">
+          <h3>🎸 Playlist - Guns N' Roses</h3>
+          <div class="playlist" id="playlistContainer"></div>
+        </div>
+      </div>
+
+      <!-- Special Controls Section -->
+      <div class="special-controls">
+        <div class="controls-grid">
+          <!-- Clap Detector Card -->
+          <div class="control-card">
+            <h3>👏 Detector de Palmas</h3>
+            <p>Bata uma palma para tocar "Sweet Child o' Mine"</p>
+            <button class="btn btn-primary" id="clapDetectorBtn">Ativar Detector</button>
+            <div class="status-text" id="clapStatus"></div>
+          </div>
+
+          <!-- Voice Recognition Card -->
+          <div class="control-card">
+            <h3>🎤 Reconhecimento de Voz</h3>
+            <p>Diga comandos: Play, Pause, Next, Stop</p>
+            <button class="btn btn-primary" id="voiceBtn">Ativar Voz</button>
+            <div class="transcript-text" id="transcript"></div>
+          </div>
+
+          <!-- Chat Card -->
+          <div class="control-card">
+            <h3>💬 Chat com Jarvis</h3>
+            <p>Converse com seu assistente</p>
+            <button class="btn btn-primary" id="chatToggleBtn">Abrir Chat</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Section (Hidden by default) -->
+      <div class="music-section" id="chatSection" style="display: none;">
+        <h3>💬 Chat com JARVIS</h3>
+        <div class="chat-box">
+          <div class="chat-messages" id="chatMessages"></div>
+          <div class="chat-input-group">
+            <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+            <button class="btn btn-secondary btn-small" id="sendBtn">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>🎩 JARVIS AI Music Assistant v1.0 | Criado com ❤️ por Murillo Cunha</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/player.js"></script>
+  <script src="js/voice.js"></script>
+  <script src="js/clap-detector.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
